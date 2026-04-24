@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Carritos de la compra</title>
+        <link rel="stylesheet" href="style_carrito.css">
+    </head>
+    <body>
+        <header>
+            <h1>Carritos de la compra</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo de Productos</a></li>
+                </ul>
+            </nav>
+
+            <h2>Carritos del perfil</h2>
+            <p>Seleccione el carrito que desee para ver su contenido</p>
+            
+            <form action="carrito.html" method="GET">
+                <input type="text" placeholder="Buscar carrito">
+                <button type="submit" class="boton">Buscar</button>
+            </form> 
+        </header>
+        
+        <section class="carritos">
+            <article class="carrito1">
+                <h2>Carrito 1</h2>
+                <span>Carrito creado el 20/03/2026</span>
+                <a href="carrito.html" class="boton boton-principal">Detalle del carrito</a>
+            </article>
+            <article class="carrito2">
+                <h2>Carrito 2</h2>
+                <span>Carrito creado el 25/03/2026</span>
+                <a href="carrito2.html" class="boton boton-principal">Detalle del carrito</a>
+            </article>
+            <article class="carrito3">
+                <h2>Carrito 3</h2>
+                <span>Carrito creado el 28/03/2026</span>
+                <a href="carrito3.html" class="boton boton-principal">Detalle del carrito</a>
+            </article>
+        </section>
+        
+        <footer>
+            <p><a href="index.html">Página de inicio</a></p>
+            <p>&copy; Jose Manuel Fernández Freige</p>
+        </footer>        
+    </body>
+</html>
