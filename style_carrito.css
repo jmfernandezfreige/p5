@@ -12,7 +12,7 @@
     cursor: pointer; /* Ratón como una mano */
 }
 
-/* Botones de "Detalle" en index o "Compar ya" */
+/* Botones */
 .boton-principal {
     background-color: #ffd814; /* Amarillo Amazon */
     color: #0f1111;
@@ -34,6 +34,11 @@
 /* Efecto al pasar el ratón por encima del botón secundario */
 .boton-secundario:hover {
     background-color: #f3f3f3;
+}
+
+.boton-password {
+    border: 1px solid #007185;
+    padding: 0 15px;
 }
 
 
@@ -87,8 +92,15 @@ nav a:hover {
     text-decoration: none; /* Que no se subraye */
 }
 
-/* Buscador */
-header form {
+/* Menú de Usuario en el Header */
+.sesion-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Buscador Index */
+.buscador {
     margin-top: 15px;
 }
 
@@ -228,15 +240,15 @@ article a:hover {
 }
 
 
-/* En la página CHECKOUT */
-.formulario-pago form {
+/* Formularios */
+.formulario form {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra lados y abajo*/
 }
 
-.formulario-pago fieldset {
+.formulario fieldset {
     border: 2px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -244,7 +256,7 @@ article a:hover {
     background-color: #fafafa;
 }
 
-.formulario-pago legend {
+.formulario legend {
     font-weight: bold;
     color: #007185;
     background-color: white;
@@ -253,10 +265,23 @@ article a:hover {
     border-radius: 4px;
 }
 
+.formulario label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contenedor-password {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
 /* Cajas de texto y email */
-.formulario-pago input[type="text"],
-.formulario-pago input[type="email"] {
-    width: 100%; /* Ocupan todo el ancho disponible */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    width: 90%;
     padding: 12px;
     margin-top: 8px; /* Separar la caja de la etiqueta */
     border: 1px solid lightgray;
@@ -264,16 +289,23 @@ article a:hover {
 }
 
 /* Al hacer clic en una caja de texto pseudo-clase :focus */
-.formulario-pago input[type="text"]:focus,
-.formulario-pago input[type="email"]:focus {
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus {
     border-color: #007185;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 113, 133, 0.3);
 }
 
-.formulario-pago button[type="submit"] {
+.formulario button[type="submit"] {
     width: 100%;
     font-size: 1.2em;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 

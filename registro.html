@@ -1,0 +1,59 @@
+<DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" , content="width=device-width">
+        <title>Registro de clientes</title>
+        <link rel="stylesheet" href="style_carrito.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Crea tu cuenta</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo de Productos</a></li>
+                </ul>
+            </nav>
+            <h2>¿Ya tienes cuenta?</h2>
+            <a href="login.html" class="boton boton-principal">Iniciar sesión</a>
+            <h3>Introduzca sus datos</h3>
+        </header>
+        <section class="formulario registro">
+            <form id="form-registro">
+                <fieldset>
+                    <legend>Datos de usuario</legend>
+                    <label>Nombre completo:</label>
+                    <input type="text" required name="nombre" placeholder="Ej.: Pablo Fernández">
+
+                    <label>Correo electrónico:</label>
+                    <input type="email" required name="email" placeholder="hola@gmail.com">
+
+                    <label>Nueva contraseña:</label>
+                    <div class="contenedor-password">
+                        <input type="password" required name="contraseña">
+                        <button class="boton boton-password">Ocultar</button>
+                    </div>
+
+                    <label>Repite contraseña:</label>
+                    <div class="contenedor-password">
+                        <input type="password" required name="repetición">
+                        <button class="boton boton-password">Ocultar</button>
+                    </div>
+                </fieldset>
+                <button type="submit" class="boton boton-principal">Crear cuenta</button>
+
+            </form>
+        </section>
+
+        <footer>
+            <p><a href="index.html">Página de inicio</a></p>
+            <p>&copy; Jose Manuel Fernández Freige</p>
+        </footer>
+
+        <script src="js/registro.js"></script>
+    </body>
+
+    </html>

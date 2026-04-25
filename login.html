@@ -1,0 +1,52 @@
+<DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" , content="width=device-width">
+        <title>Inicio de Sesión</title>
+        <link rel="stylesheet" href="style_carrito.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Entra en tu cuenta</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo de Productos</a></li>
+                    <li id="menu-usuario" class="sesion-nav"></li>
+                </ul>
+            </nav>
+            <h2>¿No tienes cuenta?</h2>
+            <a href="registro.html" class="boton boton-principal">Registrarse</a>
+            <h3>Introduzca sus credenciales de acceso</h3>
+        </header>
+        <section class="formulario login">
+            <form id="form-login">
+                <fieldset>
+                    <legend>Datos de usuario</legend>
+                    <label>Correo electrónico:</label>
+                    <input type="email" required name="email" placeholder="hola@gmail.com">
+
+                    <label>Tu contraseña:</label>
+                    <div class="contenedor-password">
+                        <input type="password" required name="contraseña">
+                        <button class="boton boton-password">Ocultar</button>
+                    </div>
+                </fieldset>
+                <button type="submit" class="boton boton-principal">Entrar</button>
+
+            </form>
+        </section>
+
+        <footer>
+            <p><a href="index.html">Página de inicio</a></p>
+            <p>&copy; Jose Manuel Fernández Freige</p>
+        </footer>
+
+        <script src="js/sesion.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+
+    </html>

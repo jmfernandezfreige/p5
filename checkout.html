@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Finalizar Compra</title>
-        <link rel="stylesheet" href="style_carrito.css">
-    </head>
-    <body>
-        <header>
-            <h1>Pago del carrito</h1>
-            
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="carrito.html">Volver al Carrito</a></li>
-                </ul>
-            </nav>
 
-            <h2>Proceso de pago</h2>
-            <p>Por favor rellene sus datos para completar el pedido.</p> 
-        </header>
-        <hr>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="style_carrito.css">
+</head>
 
-        <section class="formulario-pago">
-            <form action="index.html" method="GET">
-                
-                <fieldset>
-                    <legend>Datos de envío</legend>
-                    
-                    <label for="nombre">Nombre completo:</label>
-                    <br>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Pablo Fernández" required>
-                    <br><br>
-                    
-                    <label for="email">Correo electrónico:</label>
-                    <br>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-                    <br><br>
+<body>
+    <header>
+        <h1>Pago del carrito</h1>
 
-                    <label for="direccion">Dirección completa:</label>
-                    <br>
-                    <input type="text" id="direccion" name="direccion" required>
-                    <br>
-                </fieldset>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carrito.html">Volver al Carrito</a></li>
+                <li id="menu-usuario" class="sesion-nav"></li>
+            </ul>
+        </nav>
 
-                <br>
+        <h2>Proceso de pago</h2>
+        <p>Por favor rellene sus datos para completar el pedido.</p>
+    </header>
+    <hr>
 
-                <fieldset>
-                    <legend>Método de pago</legend>
-                    
+    <section class="formulario">
+        <form action="index.html" method="GET">
+
+            <fieldset>
+                <legend>Datos de envío</legend>
+
+                <label for="nombre">Nombre completo:</label>
+
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Pablo Fernández" required>
+
+
+                <label for="email">Correo electrónico:</label>
+
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                <!-- Se podría rellenar automáticamente con el correo del usuario logueado -->
+
+                <label for="direccion">Dirección completa:</label>
+
+                <input type="text" id="direccion" name="direccion" required>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Método de pago</legend>
+                <div class="opcion">
                     <input type="radio" id="tarjeta" name="metodo_pago" value="tarjeta" required>
-                    <label for="tarjeta">Tarjeta de Crédito / Débito</label><br>
-                    
+                    <label for="tarjeta">Tarjeta de Crédito / Débito</label>
+                </div>
+                <div class="opcion">
                     <input type="radio" id="paypal" name="metodo_pago" value="paypal">
-                    <label for="paypal">PayPal</label><br>
-                </fieldset>
+                    <label for="paypal">PayPal</label>
+                </div>
+            </fieldset>
 
-                <br>
+            <button type="submit" class="boton boton-principal">Confirmar y Pagar</button>
 
-                <button type="submit" class="boton boton-principal">Confirmar y Pagar</button>
-                
-            </form>
-        </section>
-        <hr>
+        </form>
+    </section>
+    <hr>
 
-        <footer>
-            <p><a href="index.html">Página de inicio</a></p>
-            <p>&reg; Jose Manuel Fernández Freige</p>
-        </footer>        
-    </body>
+    <footer>
+        <p><a href="index.html">Página de inicio</a></p>
+        <p>&reg; Jose Manuel Fernández Freige</p>
+    </footer>
+
+    <script src="js/sesion.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
 </html>
