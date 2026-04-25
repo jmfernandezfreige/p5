@@ -33,6 +33,7 @@ async function iniciarSesion(event) {
             localStorage.setItem('token', tokenSimulado);
             window.location.href = "index.html";
         } else {
+            alert("Email o contraseña incorrectos");
             console.log("Credenciales incorrectos");
         }
     } catch (error) {
@@ -40,4 +41,23 @@ async function iniciarSesion(event) {
         alert("No se pudo iniciar sesión");
     };
 
+}
+
+//Para el botón de ver contraseña
+const inputPassword = document.getElementById("input-contraseña");
+const botonVer = document.getElementById("ver-contraseña");
+
+if (inputPassword && botonVer) {
+    botonVer.addEventListener("mousedown", () => {
+        inputPassword.type = "text";
+    });
+
+    botonVer.addEventListener("mouseup", () => {
+        inputPassword.type = "password";
+    });
+
+    //Si el ratón se va fuera del área del botón sin soltarlo
+    botonVer.addEventListener("mouseleave", () => {
+        inputPassword.type = "password";
+    });
 }
