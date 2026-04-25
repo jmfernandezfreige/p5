@@ -48,3 +48,48 @@ async function registrarUsuario(event) {
     }
 
 }
+
+//Para botones de ver contraseña
+const inputPassword = document.getElementById("input-contraseña");
+const botonVer = document.getElementById("ver-contraseña");
+
+if (inputPassword && botonVer) {
+    botonVer.addEventListener("click", (event) => {
+        event.preventDefault();
+    });
+
+    botonVer.addEventListener("mousedown", () => {
+        inputPassword.type = "text";
+    });
+
+    botonVer.addEventListener("mouseup", () => {
+        inputPassword.type = "password";
+    });
+
+    //Si el ratón se va fuera del área del botón sin soltarlo
+    botonVer.addEventListener("mouseleave", () => {
+        inputPassword.type = "password";
+    });
+}
+
+const inputPassword2 = document.getElementById("input-contraseña2");
+const botonVer2 = document.getElementById("ver-contraseña2");
+
+if (inputPassword2 && botonVer2) {
+    botonVer2.addEventListener("click", (event) => {
+        event.preventDefault();
+    });
+
+    botonVer2.addEventListener("mousedown", () => {
+        inputPassword2.type = "text";
+    });
+
+    botonVer2.addEventListener("mouseup", () => {
+        inputPassword2.type = "password";
+    });
+
+    //Si el ratón se va fuera del área del botón sin soltarlo
+    botonVer2.addEventListener("mouseleave", () => {
+        inputPassword2.type = "password";
+    });
+}
