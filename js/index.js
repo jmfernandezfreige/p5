@@ -39,8 +39,8 @@ async function cargarCarritos() {
                             <h2>Carrito ${numeroCarrito}</h2>
                             <span>Precio total ${carrito.precioTotal}€</span>
                             <div class="acciones">
-                                <a href="carrito.html?id=${carrito.idCarrito}" class="boton boton-principal">Detalle del carrito</a>
-                                <button onclick="borrarCarrito(${carrito.idCarrito})" class="boton boton-secundario">Eliminar carrito</button>
+                                <a href="carrito.html?id=${carrito.idCarrito}" class="boton boton-principal">Detalle</a>
+                                <button onclick="borrarCarrito(${carrito.idCarrito})" class="boton boton-secundario">Eliminar</button>
                             </div>
                         </article>
                     `;
