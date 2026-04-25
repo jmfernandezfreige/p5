@@ -13,10 +13,9 @@ async function cargarUsuario() {
 
         const respuesta = await fetch(API_AUTH, {
             method: 'GET',
-            mode: 'cors',
             headers: {
                 'Accept': 'application/json',
-                'Authorization': 'Bearer ' + token
+                'Authorization': 'Basic ' + token
             }
         });
         

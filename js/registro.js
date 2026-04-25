@@ -27,21 +27,22 @@ async function registrarUsuario(event) {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ email: email, contraseña: contraseña })
+                body: JSON.stringify({ email: email, contraseña: contraseña, rol: {nombreRol: "USER"} })
             });
 
             if (respuesta.ok) {
-                aler("Usuario registrado con éxito, inicie sesión ahora.");
+                alert("Usuario registrado con éxito, inicie sesión ahora.");
                 window.location.href = "login.html";
             } else {
                 console.log("Registro fallido");
-                throw new Error("Registro fallido");
+                const errorBackend = await respuesta.json(); // O respuesta.text() si no devuelve JSON
+                console.log("Motivo del Bad Request:", errorBackend);
+                alert("Error del servidor: " + (errorBackend.message || "Revisa la consola para más detalles"));
+                throw new Error("Registro fallido con código 400");
             }
         } catch (error) {
             console.error('Error inesperado:', error);
             alert("No se pudo registrar el usuario");
-        } finally {
-            console.log("Registro finalizado");
         }
 
     }
