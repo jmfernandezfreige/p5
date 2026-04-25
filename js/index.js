@@ -13,7 +13,7 @@ async function cargarCarritos() {
     if (!token) {
         carritos.innerHTML = "<p>Inicia sesión para ver tus carritos</p>";
         botonNuevo.style.display = "none";
-        console.log("No se encontró token, usuario no autenticado");
+        console.log("Inicia sesión para ver los carritos");
         return;
     }
 
