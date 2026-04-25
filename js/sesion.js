@@ -2,7 +2,7 @@ const API_AUTH = "http://localhost:8080/api/usuarios/me";
 
 document.addEventListener("DOMContentLoaded", cargarUsuario);
 
-const cargarUsuario = async function() {
+async function cargarUsuario() {
     const menu = document.getElementById("menu-usuario");
     if (!menu) {
         return;
@@ -45,8 +45,8 @@ const cargarUsuario = async function() {
     }
 }
 
-const cerrarSesion = function(event) {
+function cerrarSesion(event) {
     event.preventDefault();
     localStorage.removeItem('token');
-    window.location.href = "index.html";
+    window.location.href = "login.html";
 }
