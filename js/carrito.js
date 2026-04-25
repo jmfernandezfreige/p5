@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", cargarLineas);
 async function cargarLineas() {
 
     botonProductos.href = `productos.html?id=${idCarrito}`;
+    botonPagar.href = `checkout.html?id=${idCarrito}`;
     
     if (!token) {
         alert("Inicia sesión para ver el carrito");
