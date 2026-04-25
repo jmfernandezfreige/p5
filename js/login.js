@@ -48,6 +48,10 @@ const inputPassword = document.getElementById("input-contraseña");
 const botonVer = document.getElementById("ver-contraseña");
 
 if (inputPassword && botonVer) {
+    botonVer.addEventListener("click", (event) => {
+        event.preventDefault();
+    });
+
     botonVer.addEventListener("mousedown", () => {
         inputPassword.type = "text";
     });
