@@ -1,5 +1,5 @@
 const API_LINEAS = "http://localhost:8080/api/carritos/{idCarrito}/lineas";
-const API_LINEA = "http://localhost:8080/api/carritos/{idCarrito}/lineas/{idLinea";
+const API_LINEA = "http://localhost:8080/api/carritos/{idCarrito}/lineas/{idLinea}";
 
 const parametroURL = new URLSearchParams(window.location.search);
 const idCarrito = parametroURL.get("id");
@@ -21,6 +21,9 @@ const catalogoProductos = {
 document.addEventListener("DOMContentLoaded", cargarLineas);
 
 async function cargarLineas() {
+
+    botonProductos.href = `productos.html?id=${idCarrito}`;
+    
     if (!token) {
         alert("Inicia sesión para ver el carrito");
         window.location.href = "login.html";
@@ -54,7 +57,7 @@ async function cargarLineas() {
             }
 
             listaLineas.forEach((linea) => {
-                const nombreProducto = catalogoProductos[linea.idProducto] || "Producto desconocido";
+                const nombreProducto = catalogoProductos[linea.idArticulo] || "Producto desconocido";
                 precioTotal += linea.costeLinea;
 
                 lineas.innerHTML += `
@@ -93,10 +96,10 @@ async function borrarLinea(idLinea) {
     }
 
     try {
-        const respuesta = await fetch(API_LINEAS.replace("{idCarrito}", idCarrito).replace("{idLinea}", idLinea), {
+        const respuesta = await fetch(API_LINEA.replace("{idCarrito}", idCarrito).replace("{idLinea}", idLinea), {
             method: 'DELETE',
             mode: 'cors',
-            header: {
+            headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Basic ' + token
             },
